@@ -1,18 +1,21 @@
 <div align="center">
 
-# 🛑 HALT
+# Storefront Lab
 
-### AI-Powered A/B Testing & Store Optimization Platform
+### Team hackathon prototype for AI-assisted storefront review
 
 [![Devpost](https://img.shields.io/badge/Devpost-003E54?style=for-the-badge&logo=devpost&logoColor=white)](https://devpost.com/software/halt-y8jwon?ref_content=user-portfolio&ref_feature=in_progress)
 [![Live Demo](https://img.shields.io/badge/Live_Demo-halt--hack.tech-FF6B6B?style=for-the-badge&logo=vercel&logoColor=white)](https://www.halt-hack.tech/)
 [![UofTHacks 13](https://img.shields.io/badge/UofTHacks_13-Hackathon-9B59B6?style=for-the-badge)](https://uofthacks-13.devpost.com/)
 
-**Transforming E-Commerce Optimization with Autonomous AI Agents**
+**Exploring storefront layouts with AI shopper feedback**
 
-[Try Live Demo](https://www.halt-hack.tech/) • [View on Devpost](https://devpost.com/software/halt-y8jwon) • [Report Bug](https://github.com/leungt30/HALT/issues)
+[Try Live Demo](https://www.halt-hack.tech/) • [View on Devpost](https://devpost.com/software/halt-y8jwon)
 
 </div>
+
+Storefront Lab is the public-facing name of this fork of **HALT**, our UofTHacks 13 team project. The [original team repository](https://github.com/leungt30/HALT) and team credits below preserve its provenance. This is a hackathon prototype; simulated shopper feedback is not validated human-user testing or evidence of conversion gains.
+
 
 ---
 
@@ -29,7 +32,7 @@
   - [Running Locally](#running-locally)
 - [How It Works](#-how-it-works)
 - [Challenges](#-challenges)
-- [Accomplishments](#-accomplishments)
+- [Accomplishments](#accomplishments)
 - [What We Learned](#-what-we-learned)
 - [Future Roadmap](#-future-roadmap)
 - [Team](#-team)
@@ -39,7 +42,7 @@
 
 ## 🎯 Overview
 
-**HALT** is an innovative AI-powered platform that revolutionizes e-commerce A/B testing by creating realistic customer simulations. Instead of waiting weeks for real user data, businesses can now test store layouts and optimizations in minutes using autonomous AI agents that mimic diverse customer behaviors and preferences.
+**Storefront Lab** connects a storefront, an analytics API, a Gemini-powered layout manager, and browser-based shopper agents. The prototype gathers simulated feedback and proposes layout changes. It does not establish that simulated shoppers predict real customer behaviour.
 
 🔗 **[View Full Project on Devpost](https://devpost.com/software/halt-y8jwon?ref_content=user-portfolio&ref_feature=in_progress)**
 
@@ -47,9 +50,9 @@
 
 ## 💡 Inspiration
 
-Companies spend **$1.5 billion annually** on A/B testing in the United States alone. Industry leaders like Shopify and Amplitude constantly optimize e-commerce platforms, knowing that even a **0.1% boost in engagement** can generate hundreds of thousands of dollars in additional revenue.
+The project explores whether automated shopper feedback can help developers review storefront layouts.
 
-Our team aims to revolutionize this process by leveraging AI to:
+The original hackathon explored these goals:
 - **Accelerate testing cycles** from weeks to hours
 - **Reduce costs** associated with traditional A/B testing
 - **Enable data-driven decisions** before production deployment
@@ -60,9 +63,9 @@ Our team aims to revolutionize this process by leveraging AI to:
 ## ✨ Features
 
 ### 🤖 Autonomous AI Agents
-- **Store Manager Agent**: Analyzes analytics and optimizes store layouts automatically
-- **Customer Agents**: Simulate realistic shoppers with diverse personalities, goals, and behaviors
-- **10 Unique Personas**: From budget-conscious browsers to tech-savvy comparison shoppers
+- **Store Manager Agent**: Reviews analytics and proposes store layout changes
+- **Customer Agents**: Simulate shoppers with diverse personalities, goals, and behaviors
+- **Shopper Personas**: From budget-conscious browsers to tech-savvy comparison shoppers
 
 ### 📊 Real-Time Analytics
 - Track customer interactions, browsing patterns, and purchase behaviors
@@ -77,7 +80,7 @@ Our team aims to revolutionize this process by leveraging AI to:
 ### 🔄 Continuous Optimization Loop
 - Store Manager reviews analytics → proposes layout changes
 - Customer agents test new layout → provide detailed feedback
-- System iterates automatically to find optimal configurations
+- System repeats the feedback cycle for a configured number of iterations
 
 ---
 
@@ -130,7 +133,7 @@ graph TB
 |-----------|-----------|---------|
 | **Frontend** | React + TypeScript + Vite | Customer-facing e-commerce storefront with event tracking |
 | **Backend** | Express + TypeScript + MongoDB | RESTful API for layout management and analytics storage |
-| **Store Manager AI** | Python + Gemini Flash | Autonomous agent that optimizes store layouts based on data |
+| **Store Manager AI** | Python + Gemini Flash | Agent that proposes store layout changes based on feedback |
 | **Customer AI Agent** | Python + Gemini Flash + Browser Use | Simulates diverse customer behaviors and provides feedback |
 
 ---
@@ -163,7 +166,7 @@ graph TB
 
 ### Prerequisites
 
-Before running HALT locally, ensure you have:
+Before running Storefront Lab locally, ensure you have:
 
 - **Node.js** (v18 or higher) and **npm**
 - **Python** (3.9 or higher)
@@ -175,8 +178,8 @@ Before running HALT locally, ensure you have:
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/leungt30/HALT.git
-   cd HALT
+   git clone https://github.com/AlaqmarG/storefront-lab.git
+   cd storefront-lab
    ```
 
 2. **Set up Python virtual environment**
@@ -232,7 +235,7 @@ Before running HALT locally, ensure you have:
 
 ## 🖥️ Running Locally
 
-HALT consists of **4 independent services** that work together. You can run them individually or use the optimization loop script.
+Storefront Lab consists of **4 independent services** that work together. You can run them individually or use the optimization loop script.
 
 ### Option 1: Run All Services Individually
 
@@ -307,7 +310,7 @@ This script will:
    - Updates layout via backend API
 
 3. **Customer Simulation**
-   - Spawns 10 AI customer agents with diverse personas
+   - Spawns a batch of AI customer agents with different personas
    - Each agent navigates the store with specific goals:
      - Quick purchase vs. browsing
      - Budget-conscious vs. feature-focused
@@ -325,7 +328,7 @@ This script will:
 5. **Iteration**
    - Store Manager reviews feedback
    - Proposes refined layout based on insights
-   - Cycle repeats until optimal performance achieved
+   - Cycle repeats for the configured iteration limit; no optimality guarantee is established.
 
 ---
 
@@ -343,17 +346,11 @@ Integrating LLMs with decision-making into a traditional web stack required **si
 
 ---
 
-## 🏆 Accomplishments
+## Accomplishments
 
-We're proud of:
-
-✅ **Successfully integrating agentic LLMs** into a live web environment, demonstrating their potential beyond traditional chatbot interfaces
-
-✅ **Designing and deploying a robust full-stack pipeline** with clear data flows between 4 independent services
-
-✅ **Creating realistic customer simulations** with 10 diverse personas that accurately mimic human shopping behaviors
-
-✅ **Delivering real-world impact** potential for e-commerce operations and user shopping experiences
+- Integrated language-model calls, browser-agent simulations, storefront APIs and a feedback loop in a team hackathon prototype.
+- Kept the implementation public for inspection and further experimentation.
+- Human-behaviour fidelity, conversion gains and production reliability have not been established.
 
 ---
 
@@ -439,7 +436,7 @@ This project was created for **UofTHacks 13**. See the repository for license de
 
 <div align="center">
 
-**[⬆ Back to Top](#-halt)**
+**[⬆ Back to Top](#storefront-lab)**
 
 Made at UofTHacks 13
 

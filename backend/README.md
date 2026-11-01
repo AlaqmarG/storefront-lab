@@ -1,4 +1,4 @@
-# HALT Backend Service
+# Storefront Lab Backend Service
 
 The backbone of the dynamic storefront, responsible for managing layout configuration and state.
 

@@ -1,6 +1,6 @@
 # Customer AI Agent Service
 
-This service runs an automated AI agent that simulates human customer behavior on the HALT frontend. It uses browser automation (`browser-use` + `playwright`) to browse, scroll, add items to cart, and provide feedback.
+This service runs an automated AI agent that simulates human customer behavior on the Storefront Lab frontend (originally HALT). It uses browser automation (`browser-use` + `playwright`) to browse, scroll, add items to cart, and provide feedback.
 
 ## 🚀 Getting Started
 
